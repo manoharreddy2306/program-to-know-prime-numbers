@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    int x, y, hcf;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &x, &y);
+
+    for(int i = 1; i <= x && i <= y; ++i){
+        if(x%i==0 && y%i==0)
+            hcf = i;
+    }
+    
+    if (hcf == 1){
+        printf("%d and %d are Relatively prime numbers.", x, y);
+    }
+    else{
+        printf("%d and %d are not relatively prime.", x, y);
+    }
+
+    return 0;
+}
